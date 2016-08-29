@@ -31,3 +31,4 @@ cutdown$BUS_Title <- gsub(".*retired.*", "Retired", cutdown$BUS_Title, ignore.ca
 ########################################
 if (cutdown[r,4] == "Retired" && !is.na(cutdown[r,4]))
 
+age <- year(strptime("2016-08-29", format= "%Y-%m-%d")) - year(strptime(cutdown$DOB, format="%Y-%m-%d"))
